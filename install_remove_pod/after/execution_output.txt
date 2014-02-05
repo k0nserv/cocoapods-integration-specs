@@ -1,4 +1,4 @@
-CP_AGGRESSIVE_CACHE=TRUE $ pod install --no-repo-update --verbose --no-color 2>&1
+CP_AGGRESSIVE_CACHE=TRUE $ pod install --no-repo-update --verbose --no-ansi 2>&1
 Analyzing dependencies
 
 Finding Podfile changes
@@ -36,7 +36,8 @@ Generating Pods project
       - Generating prefix header at `Pods/Pods-Reachability-prefix.pch`
       - Generating dummy source file at `Pods/Pods-Reachability-dummy.m`
     - Installing target `Pods` iOS 6.0
-      - Generating xcconfig file at `Pods/Pods.xcconfig`
+      - Generating Release xcconfig file at `Pods/Pods.Release.xcconfig`
+      - Generating Debug xcconfig file at `Pods/Pods.Debug.xcconfig`
       - Generating target environment header at `Pods/Pods-environment.h`
       - Generating copy resources script at `Pods/Pods-resources.sh`
       - Generating acknowledgements at `Pods/Pods-acknowledgements.plist`

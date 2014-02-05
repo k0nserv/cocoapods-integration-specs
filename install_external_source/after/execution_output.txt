@@ -1,11 +1,10 @@
-CP_AGGRESSIVE_CACHE=TRUE $ pod install --no-repo-update --verbose --no-color 2>&1
+CP_AGGRESSIVE_CACHE=TRUE $ pod install --no-repo-update --verbose --no-ansi 2>&1
 Analyzing dependencies
 
 Fetching external sources
 -> Pre-downloading: `PodTest` from `PodTest-hg-source`
  > Mercurial download
-   $ /usr/local/bin/hg clone "PodTest-hg-source"
-   "ROOT/tmp/install_external_source/Pods/PodTest"
+   $ /usr/local/bin/hg clone PodTest-hg-source ROOT/tmp/install_external_source/Pods/PodTest
    updating to branch default
    5 files updated, 0 files merged, 0 files removed, 0 files unresolved
 
@@ -39,7 +38,8 @@ Generating Pods project
       - Generating prefix header at `Pods/Pods-PodTest-prefix.pch`
       - Generating dummy source file at `Pods/Pods-PodTest-dummy.m`
     - Installing target `Pods` iOS 4.3
-      - Generating xcconfig file at `Pods/Pods.xcconfig`
+      - Generating Release xcconfig file at `Pods/Pods.Release.xcconfig`
+      - Generating Debug xcconfig file at `Pods/Pods.Debug.xcconfig`
       - Generating target environment header at `Pods/Pods-environment.h`
       - Generating copy resources script at `Pods/Pods-resources.sh`
       - Generating acknowledgements at `Pods/Pods-acknowledgements.plist`
@@ -48,7 +48,6 @@ Generating Pods project
   - Running post install hooks
   - Writing Xcode project file to `Pods/Pods.xcodeproj`
   - Writing Lockfile in `Podfile.lock`
-[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
   - Writing Manifest in `Pods/Manifest.lock`
 
 Integrating client project
@@ -57,6 +56,10 @@ Integrating client project
 
 Integrating Pod target `Pods-PodTest` into aggregate target Pods of project `SampleApp.xcodeproj`.
 
-[!] The target `iOS App [Release]` overrides the `OTHER_CFLAGS` build setting defined in `Pods/Pods.xcconfig'.
+[!] The target `iOS App [Release]` overrides the `OTHER_CFLAGS` build setting defined in `Pods/Pods.Release.xcconfig'.
+    - Use the `$(inherited)` flag, or
+
+[!] The target `iOS App [Release]` overrides the `OTHER_CFLAGS` build setting defined in `Pods/Pods.Release.xcconfig'.
+    - Remove the build settings from the target.
     - Use the `$(inherited)` flag, or
     - Remove the build settings from the target.

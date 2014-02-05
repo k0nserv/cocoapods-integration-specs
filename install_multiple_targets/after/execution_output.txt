@@ -1,4 +1,4 @@
-CP_AGGRESSIVE_CACHE=TRUE $ pod install --no-repo-update --verbose --no-color 2>&1
+CP_AGGRESSIVE_CACHE=TRUE $ pod install --no-repo-update --verbose --no-ansi 2>&1
 Analyzing dependencies
 
 Resolving dependencies of `Podfile`
@@ -25,8 +25,8 @@ Downloading dependencies
    $ /usr/bin/git rev-list --max-count=1 0aff3deb5e1bb2bbc88a83fd71c8ad5550185cce
    0aff3deb5e1bb2bbc88a83fd71c8ad5550185cce
  > Cloning to Pods folder
-     $ /usr/bin/git clone "CACHES_DIR/GitHub/de3e1c97c03ac13b29e7533beea2d2131589900f"
-     "ROOT/tmp/install_multiple_targets/Pods/JSONKit"
+     $ /usr/bin/git clone CACHES_DIR/GitHub/de3e1c97c03ac13b29e7533beea2d2131589900f
+     ROOT/tmp/install_multiple_targets/Pods/JSONKit
      Cloning into 'ROOT/tmp/install_multiple_targets/Pods/JSONKit'...
      done.
      Checking connectivity... done
@@ -42,8 +42,8 @@ Downloading dependencies
    $ /usr/bin/git rev-list --max-count=1 v3.1.0
    f7176f4798d068d233dca5223ae4bd9c8059e830
  > Cloning to Pods folder
-     $ /usr/bin/git clone "CACHES_DIR/GitHub/48f11286750afa2e2eb80564e288f42eed7cbab6"
-     "ROOT/tmp/install_multiple_targets/Pods/Reachability"
+     $ /usr/bin/git clone CACHES_DIR/GitHub/48f11286750afa2e2eb80564e288f42eed7cbab6
+     ROOT/tmp/install_multiple_targets/Pods/Reachability
      Cloning into 'ROOT/tmp/install_multiple_targets/Pods/Reachability'...
      done.
      Checking connectivity... done
@@ -93,21 +93,24 @@ Generating Pods project
       - Generating prefix header at `Pods/Pods-test-JSONKit-prefix.pch`
       - Generating dummy source file at `Pods/Pods-test-JSONKit-dummy.m`
     - Installing target `Pods` iOS 6.0
-      - Generating xcconfig file at `Pods/Pods.xcconfig`
+      - Generating Release xcconfig file at `Pods/Pods.Release.xcconfig`
+      - Generating Debug xcconfig file at `Pods/Pods.Debug.xcconfig`
       - Generating target environment header at `Pods/Pods-environment.h`
       - Generating copy resources script at `Pods/Pods-resources.sh`
       - Generating acknowledgements at `Pods/Pods-acknowledgements.plist`
       - Generating acknowledgements at `Pods/Pods-acknowledgements.markdown`
       - Generating dummy source file at `Pods/Pods-dummy.m`
     - Installing target `Pods-SampleApp_2` iOS 6.0
-      - Generating xcconfig file at `Pods/Pods-SampleApp_2.xcconfig`
+      - Generating Release xcconfig file at `Pods/Pods-SampleApp_2.Release.xcconfig`
+      - Generating Debug xcconfig file at `Pods/Pods-SampleApp_2.Debug.xcconfig`
       - Generating target environment header at `Pods/Pods-SampleApp_2-environment.h`
       - Generating copy resources script at `Pods/Pods-SampleApp_2-resources.sh`
       - Generating acknowledgements at `Pods/Pods-SampleApp_2-acknowledgements.plist`
       - Generating acknowledgements at `Pods/Pods-SampleApp_2-acknowledgements.markdown`
       - Generating dummy source file at `Pods/Pods-SampleApp_2-dummy.m`
     - Installing target `Pods-test` iOS 6.0
-      - Generating xcconfig file at `Pods/Pods-test.xcconfig`
+      - Generating Release xcconfig file at `Pods/Pods-test.Release.xcconfig`
+      - Generating Debug xcconfig file at `Pods/Pods-test.Debug.xcconfig`
       - Generating target environment header at `Pods/Pods-test-environment.h`
       - Generating copy resources script at `Pods/Pods-test-resources.sh`
       - Generating acknowledgements at `Pods/Pods-test-acknowledgements.plist`
@@ -116,7 +119,6 @@ Generating Pods project
   - Running post install hooks
   - Writing Xcode project file to `Pods/Pods.xcodeproj`
   - Writing Lockfile in `Podfile.lock`
-[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
   - Writing Manifest in `Pods/Manifest.lock`
 
 Integrating client project

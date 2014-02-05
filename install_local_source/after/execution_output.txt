@@ -1,4 +1,4 @@
-CP_AGGRESSIVE_CACHE=TRUE $ pod install --no-repo-update --verbose --no-color 2>&1
+CP_AGGRESSIVE_CACHE=TRUE $ pod install --no-repo-update --verbose --no-ansi 2>&1
 Analyzing dependencies
 
 Fetching external sources
@@ -32,7 +32,8 @@ Generating Pods project
       - Generating prefix header at `Pods/Pods-Reachability-prefix.pch`
       - Generating dummy source file at `Pods/Pods-Reachability-dummy.m`
     - Installing target `Pods` iOS 4.3
-      - Generating xcconfig file at `Pods/Pods.xcconfig`
+      - Generating Release xcconfig file at `Pods/Pods.Release.xcconfig`
+      - Generating Debug xcconfig file at `Pods/Pods.Debug.xcconfig`
       - Generating target environment header at `Pods/Pods-environment.h`
       - Generating copy resources script at `Pods/Pods-resources.sh`
       - Generating acknowledgements at `Pods/Pods-acknowledgements.plist`
@@ -41,7 +42,6 @@ Generating Pods project
   - Running post install hooks
   - Writing Xcode project file to `Pods/Pods.xcodeproj`
   - Writing Lockfile in `Podfile.lock`
-[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
   - Writing Manifest in `Pods/Manifest.lock`
 
 Integrating client project
@@ -52,6 +52,10 @@ Integrating Pod target `Pods-Reachability` into aggregate target Pods of project
 
 [!] The `:local` option of the Podfile has been renamed to `:path` and is deprecated.
 
-[!] The target `iOS App [Release]` overrides the `OTHER_CFLAGS` build setting defined in `Pods/Pods.xcconfig'.
+[!] The target `iOS App [Release]` overrides the `OTHER_CFLAGS` build setting defined in `Pods/Pods.Release.xcconfig'.
+    - Use the `$(inherited)` flag, or
+
+[!] The target `iOS App [Release]` overrides the `OTHER_CFLAGS` build setting defined in `Pods/Pods.Release.xcconfig'.
+    - Remove the build settings from the target.
     - Use the `$(inherited)` flag, or
     - Remove the build settings from the target.

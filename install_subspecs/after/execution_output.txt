@@ -1,15 +1,15 @@
-CP_AGGRESSIVE_CACHE=TRUE $ pod install --no-repo-update --verbose --no-color 2>&1
+CP_AGGRESSIVE_CACHE=TRUE $ pod install --no-repo-update --verbose --no-ansi 2>&1
 Analyzing dependencies
 
 Fetching external sources
 -> Pre-downloading: `PodTest` from `PodTest-hg-source`
  > Mercurial download
-   $ /usr/local/bin/hg clone "PodTest-hg-source" "ROOT/tmp/install_subspecs/Pods/PodTest"
+   $ /usr/local/bin/hg clone PodTest-hg-source ROOT/tmp/install_subspecs/Pods/PodTest
    updating to branch default
    5 files updated, 0 files merged, 0 files removed, 0 files unresolved
 -> Pre-downloading: `PodTest` from `PodTest-hg-source`
  > Mercurial download
-   $ /usr/local/bin/hg clone "PodTest-hg-source" "ROOT/tmp/install_subspecs/Pods/PodTest"
+   $ /usr/local/bin/hg clone PodTest-hg-source ROOT/tmp/install_subspecs/Pods/PodTest
    updating to branch default
    5 files updated, 0 files merged, 0 files removed, 0 files unresolved
 
@@ -51,14 +51,16 @@ Generating Pods project
       - Generating prefix header at `Pods/Pods-iOS App-PodTest-prefix.pch`
       - Generating dummy source file at `Pods/Pods-iOS App-PodTest-dummy.m`
     - Installing target `Pods-OS X App` OS X 10.6
-      - Generating xcconfig file at `Pods/Pods-OS X App.xcconfig`
+      - Generating Release xcconfig file at `Pods/Pods-OS X App.Release.xcconfig`
+      - Generating Debug xcconfig file at `Pods/Pods-OS X App.Debug.xcconfig`
       - Generating target environment header at `Pods/Pods-OS X App-environment.h`
       - Generating copy resources script at `Pods/Pods-OS X App-resources.sh`
       - Generating acknowledgements at `Pods/Pods-OS X App-acknowledgements.plist`
       - Generating acknowledgements at `Pods/Pods-OS X App-acknowledgements.markdown`
       - Generating dummy source file at `Pods/Pods-OS X App-dummy.m`
     - Installing target `Pods-iOS App` iOS 4.3
-      - Generating xcconfig file at `Pods/Pods-iOS App.xcconfig`
+      - Generating Release xcconfig file at `Pods/Pods-iOS App.Release.xcconfig`
+      - Generating Debug xcconfig file at `Pods/Pods-iOS App.Debug.xcconfig`
       - Generating target environment header at `Pods/Pods-iOS App-environment.h`
       - Generating copy resources script at `Pods/Pods-iOS App-resources.sh`
       - Generating acknowledgements at `Pods/Pods-iOS App-acknowledgements.plist`
@@ -67,7 +69,6 @@ Generating Pods project
   - Running post install hooks
   - Writing Xcode project file to `Pods/Pods.xcodeproj`
   - Writing Lockfile in `Podfile.lock`
-[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
   - Writing Manifest in `Pods/Manifest.lock`
 
 Integrating client project
@@ -78,6 +79,10 @@ Integrating Pod target `Pods-OS X App-PodTest` into aggregate target Pods-OS X A
 
 Integrating Pod target `Pods-iOS App-PodTest` into aggregate target Pods-iOS App of project `SampleApp.xcodeproj`.
 
-[!] The target `iOS App [Release]` overrides the `OTHER_CFLAGS` build setting defined in `Pods/Pods-iOS App.xcconfig'.
+[!] The target `iOS App [Release]` overrides the `OTHER_CFLAGS` build setting defined in `Pods/Pods-iOS App.Release.xcconfig'.
+    - Use the `$(inherited)` flag, or
+
+[!] The target `iOS App [Release]` overrides the `OTHER_CFLAGS` build setting defined in `Pods/Pods-iOS App.Release.xcconfig'.
+    - Remove the build settings from the target.
     - Use the `$(inherited)` flag, or
     - Remove the build settings from the target.
